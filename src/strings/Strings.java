@@ -9,7 +9,9 @@ public class Strings {
 
         StringOne s1 = new StringOne();
 
-        s1.firstTwo(str);
+        s1.middleTwo(str);
+
+
 
     }
 
@@ -61,6 +63,31 @@ class StringOne{
         }
         return str;
 
+    }
+
+
+    public String theEnd(String str, boolean front) {
+        if(front==true){
+            return str.substring(0,1);
+        }
+        return str.substring(str.length()-1,str.length());
+    }
+    public String withouEnd2(String str) {
+        if(str.length()>2){
+            return str.substring(1,str.length()-1);
+        }
+        return "";
+    }
+
+    
+    public String middleTwo(String str) {
+        int wordLength=str.length()/2;
+
+        if (str.length()>2){
+            return str.substring(wordLength-1,wordLength+1);
+
+        }
+        return str;
     }
 
 
