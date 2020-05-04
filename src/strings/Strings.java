@@ -4,12 +4,12 @@ public class Strings {
     public static void main(String[] args) {
 
 
-        String str = "Java";
+        String str = "oddly";
         String out = "[[]]";
 
         StringOne s1 = new StringOne();
 
-        s1.middleTwo(str);
+        s1.endsLy(str);
 
 
 
@@ -90,7 +90,23 @@ class StringOne{
         return str;
     }
 
-//coment
+
+    public boolean endsLy(String str) {
+
+        if(str.length()>=2 && str.substring(str.length()-2).equals("ly")){
+            System.out.println("true");
+          return true;
+        }
+        System.out.println("false "+str.substring(str.length()-2));
+        return false;
+    }
+
+
+    public String nTwice(String str, int n) {
+
+    return str.substring(n)+str.substring(str.length()-n);
+
+    }
 }
 
 

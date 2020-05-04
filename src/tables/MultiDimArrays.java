@@ -6,9 +6,9 @@ public class MultiDimArrays {
 
 
         String miesiacTydzien[][]= new String [12][7];
-
-        miesiacTydzien[0][0]={{"Styczen","Poniedziałek"}};
-        miesiacTydzien[0]=new String "styczen";
+//
+//        miesiacTydzien[0][0]={{"Styczen","Poniedziałek"}};
+//        miesiacTydzien[0]=new String "styczen";
 
 
 
@@ -18,6 +18,7 @@ int talbicaLiczbowa[][] = {
         {2,2},
         {3,3},
 };
+
 
 
 
