@@ -4,12 +4,14 @@ public class Strings {
     public static void main(String[] args) {
 
 
-        String str = "oddly";
+        String str = "abc";
         String out = "[[]]";
 
         StringOne s1 = new StringOne();
 
-        s1.endsLy(str);
+        s1.middleThree(str);
+
+        s1.hasBad(str);
 
 
 
@@ -103,10 +105,78 @@ class StringOne{
 
 
     public String nTwice(String str, int n) {
+        return str.substring(0,n)+str.substring(str.length()-n);
 
-    return str.substring(n)+str.substring(str.length()-n);
 
     }
+
+
+    public String twoChar(String str, int index) {
+
+        if(index>0){
+
+            if(str.length()>index+1)
+
+                return str.substring(index, index+2);
+
+            else
+                return str.substring(0,2);
+        }
+        else
+            return str.substring(0,2);
+    }
+
+    public String middleThree(String str) {
+        int len= (int)str.length()/2;
+        return str.substring(len-1,len+2);
+
+
+
+
+    }
+
+    public boolean hasBad(String str){
+        if (str.length()>3){
+
+                    if(str.substring(0,3).equals("bad") ||str.substring(1,4).equals("bad") ){
+                        return true;
+                    }
+
+            return false;
+        }
+
+        else if(str.length()==3){
+
+                    if(str.substring(0,3).equals("bad")){
+                        return true;
+                    }
+
+            return false;
+        }
+
+
+
+        return false;
+    }
+
+    public String atFirst(String str) {
+        if(str.length()>2){
+            return str.substring(0,2);
+        }
+        else if(str.length()==2){
+            return str;
+        }
+        else if (str.length()==1){
+            return str+"@";
+        }
+        else {
+            return "@@";
+        }
+
+    }
+
+
+
 }
 
 
