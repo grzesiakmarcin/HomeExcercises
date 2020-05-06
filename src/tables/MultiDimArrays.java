@@ -9,7 +9,7 @@ public class MultiDimArrays {
 
 
 
-        myClass zliczaj=new myClass();
+        myClass zliczaj=new myClass();    // w innej klasie mam metody do zliczania
 
 
         int [] tablicaOne = {2,4,3,6};
@@ -17,7 +17,9 @@ public class MultiDimArrays {
             zliczaj.getSum(tablicaOne);
             zliczaj.getHighest(tablicaOne);
 
-
+/**
+ * ponizej deklararowanie elementów tablicy na dwa sposoby
+ */
         int[][] jakasTablica;
 
         jakasTablica = new int[2][4];
