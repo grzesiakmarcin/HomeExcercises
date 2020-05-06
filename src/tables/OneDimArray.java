@@ -3,6 +3,14 @@ package tables;
 public class OneDimArray {
     public static void main(String[] args) {
 
+
+
+        //deklaracja tablicy:
+        //  String [] miesiaceRoku;
+        // miesiceRoku[]=new String [12];
+
+
+
         String [] dniTygodnia= new String [7];
 
         dniTygodnia[0]="Poniedziałek";
