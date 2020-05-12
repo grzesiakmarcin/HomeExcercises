@@ -1,4 +1,4 @@
-package tables;
+package arrays;
 
 public class OneDimArray {
     public static void main(String[] args) {

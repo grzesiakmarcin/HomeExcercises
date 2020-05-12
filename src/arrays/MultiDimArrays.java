@@ -1,4 +1,4 @@
-package tables;
+package arrays;
 
 public class MultiDimArrays {
 
