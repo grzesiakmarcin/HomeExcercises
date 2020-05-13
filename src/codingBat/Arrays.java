@@ -40,7 +40,7 @@ class TestClass{
 
 
 public boolean sameFirstLast(int[] nums){
-        if( nums[0]==nums.length-1){
+    if(nums[0]==nums[nums.length-1]){
             return true;
         }
 
