@@ -48,6 +48,29 @@ public boolean sameFirstLast(int[] nums){
 }
 
 
+    public int[] makePi() {
+        int[] pi = new int[3];
+        pi[0]=3;
+        pi[1]=1;
+        pi[2]=4;
+
+
+        return pi;
+
+
+    }
+
+    public boolean commonEnd(int[] a, int[] b) {
+
+        if( a[0]==b[0]   || a[a.length-1]==b[b.length-1]){
+            return true;
+
+        }
+        return false;
+    }
+
+
+
 
 
 }

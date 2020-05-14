@@ -22,6 +22,9 @@ public class OneDimArray {
         dniTygodnia[6]="Niedziela";
 
 
+        String[] zimaMiesiace = {"Grudzien", "Styczeń", "Luty"};
+
+
         //for
 
         for (int i=0; i<dniTygodnia.length;i++){
