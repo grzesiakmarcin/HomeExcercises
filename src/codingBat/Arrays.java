@@ -138,25 +138,115 @@ public boolean sameFirstLast(int[] nums){
         return middle;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public int[] makeEnds(int[] nums) {
+        int [] newArray={nums[0], nums[nums.length-1]};
+        return newArray;
     }
+
+
+
+    public boolean has23(int[] nums) {
+
+        if(nums[0]==2||nums[0]==3||nums[1]==2||nums[1]==3){
+            return true;
+
+        }
+        return false;
+    }
+
+
+    public boolean no23(int[] nums) {
+        if(!(nums[0]==2|| nums[0]==3) ){
+            return true;}
+
+        else if (!(nums[1]==2) ||nums[1]==3){
+            return true;
+        }
+
+        return false;
+    }
+
+
+    public int[] makeLast(int[] nums) {
+        int[] newArray = new int[(nums.length*2)];
+        newArray[newArray.length-1]=nums[nums.length-1];
+        return newArray;
+    }
+
+    public boolean double23(int[] nums) {
+        if(nums.length>1){
+
+            if(nums[0]==2&&nums[1]==2||nums[0]==3&&nums[1]==3){
+                return true;
+            }
+
+            return false;
+        }
+
+        return false;
+    }
+
+
+
+
+    public int[] fix23(int[] nums) {
+
+        if ((nums[1] == 2 && nums[2] == 3)) {
+            nums[2] = 0;
+
+            return nums;
+        } else if ((nums[0] == 2 && nums[1] == 3)) {
+            nums[1] = 0;
+
+            return nums;
+
+        }
+
+        return nums;
+    }
+
+    public int start1(int[] a, int[] b) {
+        int indicator=0;
+
+        if(a.length>0&& b.length>0){
+
+            if(a[0]==1&&b[0]==1){
+                indicator=2;
+            }
+            else if(a[0]==1||b[0]==1){
+                indicator = 1;
+            }
+
+            return indicator;}
+
+
+        else if(a.length==0&&b.length==0){
+            return indicator;
+        }
+        else{
+
+
+            if(a.length>0 && a[0]==1 ||b.length>0&& b[0]==1){
+                indicator=1;
+            }
+
+        }
+
+
+        return indicator;
+    }
+
+    public int[] biggerTwo(int[] a, int[] b) {
+        if(   a[0]+a[1]>b[0]+b[1]||a[0]+a[1]==b[0]+b[1]){
+            return a;
+
+        }
+
+        return b;
+    }
+
+
+}
 
 
 
