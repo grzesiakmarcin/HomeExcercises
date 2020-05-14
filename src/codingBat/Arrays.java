@@ -17,7 +17,7 @@ public class Arrays {
         int [] tab3={0,2,1,3};
         int [] tab4={0,2,1,3,4};
 
-TestClass tc = new TestClass();
+Methods tc = new Methods();
 
         System.out.println( tc.firstLast(tab2));
 
@@ -25,7 +25,7 @@ TestClass tc = new TestClass();
 
 }
 
-class TestClass{
+class Methods {
 
     public boolean firstLast(int[] nums){
 
@@ -69,8 +69,99 @@ public boolean sameFirstLast(int[] nums){
         return false;
     }
 
+    public int sum3(int[] nums) {
+        return nums[0]+nums[1]+nums[2];
+    }
+
+
+
+    public int sum31(int[] nums) {
+        int a=0;
+        for (int mojInt :nums) {
+            a=a+mojInt;
+
+        }
+
+        return a;
+    }
+
+
+
+    public int[] rotateLeft3(int[] nums) {
+        int [] rotatedLeft = {nums[1],nums[2],nums[0]};
+
+        return rotatedLeft;
+    }
+
+
+    public int[] reverse3(int[] nums) {
+        int[] reversed = {nums[2],nums[1],nums[0]};
+
+        return reversed;
+    }
+
+    public int[] maxEnd3(int[] nums) {
+
+        int newArray[] = new int[3];
+
+//        if(nums[0]>nums[2]){
+//            newArray = {nums[0], nums[0], nums[0]};
+//        }
+//
+//        else{
+//            newArray = {nums[2], nums[2], nums[2]};
+//        }
+
+
+        return newArray;
+    }
+
+
+
+        public int sum2(int[] nums) {
+
+            if(nums.length>1){
+                return nums[0]+nums[1];
+            }
+
+            else if (nums.length==1){
+                return nums[0];
+            }
+            return 0;
+
+        }
+
+
+    public int[] middleWay(int[] a, int[] b) {
+        int[] middle = {a[1],b[1]};
+
+        return middle;
+    }
 
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
