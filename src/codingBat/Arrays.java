@@ -267,6 +267,25 @@ public boolean sameFirstLast(int[] nums){
 
     }
 
+    public int maxTriple(int[] nums) {
+        int a= nums[0];
+        int b= nums[nums.length/2];
+        int c = nums[nums.length-1];
+        int result= nums[0];
+
+        if(a>b&& a>c){
+            result = a;
+        }
+        else if (a <b&& b>c){
+            result =b;
+        }
+
+        else if (c>a&& c>b){
+            result =c;
+        }
+        return result;
+    }
+
 
 
 
