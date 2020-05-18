@@ -258,6 +258,17 @@ public boolean sameFirstLast(int[] nums){
 
     }
 
+    public int[] midThree(int[] nums) {
+
+        int a=nums.length/2;
+        int[]nums2= {nums[a-1], nums[a],nums[a+1]};
+
+        return nums2;
+
+    }
+
+
+
 
 }
 
