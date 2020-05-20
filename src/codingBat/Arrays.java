@@ -287,6 +287,46 @@ public boolean sameFirstLast(int[] nums){
     }
 
 
+    public int[] frontPiece(int[] nums) {
+        if (nums.length>1){
+            int[] newArray = {nums[0], nums[1]};
+            return newArray;
+        }
+        return nums;
+    }
+
+
+
+
+
+    public boolean unlucky1(int[] nums) {
+        if (nums.length<=1) {
+            return false;
+        }
+
+        else if (nums.length ==2 && (nums[0] == 1 && nums[1] == 3)){
+            return true;
+        }
+
+        else if (nums.length >2 &&nums[0] == 1 && nums[1] == 3 ||nums.length >2&& nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3) {
+            return true;
+
+        }
+
+        else if (nums.length >2 && nums[1] == 1 && nums[2] == 3 ||nums.length >2 &&  nums[nums.length - 3] == 1 && nums[nums.length - 2] == 3){
+            return true;
+        }
+
+//wysypuje sie na 1 tescie
+
+        return false;
+    }
+
+
+
+
+
+
 
 
 }
