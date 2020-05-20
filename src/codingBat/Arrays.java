@@ -325,8 +325,67 @@ public boolean sameFirstLast(int[] nums){
 
 
 
+    public int[] make2(int[] a, int[] b) {
+
+        int[] newArray={0,0};
+
+        if(a.length==0){
+            newArray[0]=b[0];
+            newArray[1]=b[1];
+        }
+        else if (a.length==1){
+            newArray[0]=a[0];
+            newArray[1]=b[0];
+        }
+        else {
+            newArray[0]=a[0];
+            newArray[1]=a[1];
+        }
 
 
+        return newArray;
+    }
+
+
+
+    public int[] front11(int[] a, int[] b) {
+        int[] newArray={0,0};
+        int[] oneArray={0};
+        int[] otherArray={};
+
+        if(a.length>=1 && b.length>=1){
+            newArray[0]=a[0];
+            newArray[1]=b[0];
+            return newArray;
+        }
+
+        else if (a.length==0 && b.length>1){
+            oneArray[0]=b[0];
+
+            return oneArray;
+        }
+
+        else if(a.length>1 && b.length==0){
+            oneArray[0]=a[0];
+
+            return oneArray;
+        }
+
+        else if (a.length==0 && b.length==1 ){
+            oneArray[0]=b[0];
+            return oneArray;
+        }
+
+        else if (b.length==0 && a.length==1 ){
+            oneArray[0]=a[0];
+            return oneArray;
+        }
+
+
+
+
+        return otherArray;
+    }
 
 
 }
