@@ -54,5 +54,84 @@ class Methodss{
 
 
 
+    public boolean squirrelPlay(int temp, boolean isSummer) {
+
+        if (!isSummer) {
+
+            return temp >= 60 && temp <= 90;
+
+        } else
+
+            return temp >= 60 && temp <= 100;
+
+    }
+
+    public int caughtSpeeding(int speed, boolean isBirthday) {
+        if (!isBirthday){
+            if (speed<=60){
+                return 0;
+            }
+            else if (speed >80){
+                return 2;
+
+            }
+            else  {
+                return 1;
+            }
+        }
+
+
+        else
+        {
+            if(speed<=65){
+                return 0;
+            }
+            else if (speed >85){
+                return 2;
+            }
+            else {
+                return 1;
+            }
+
+        }
+
+
+    }
+
+
+    public int sortaSum(int a, int b) {
+        if (a+b>=10&& a+b<=19)
+            return 20;
+
+        else
+            return a+b;
+
+    }
+
+
+    public String alarmClock(int day, boolean vacation) {
+        if(vacation){
+            if(day ==6 || day ==0){
+                return "off";
+            }
+            else {
+                return "10:00";
+            }
+
+        }
+        else{
+            if (day ==6|| day==0){
+                return "10:00";
+            }
+
+            else {
+                return "7:00";
+            }
+        }
+
+    }
+
+
+
 
 }
