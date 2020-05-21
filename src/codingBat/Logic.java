@@ -209,5 +209,34 @@ class Methodss{
         return a+b;
     }
 
+    public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+// konsultowac z mateuszem
+        if(isAsleep=true){
+            return false;
+        }
+        if(isMorning=true && isMom != true){
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public int teaParty(int tea, int candy) {
+
+        if(tea>4&&candy>4){
+            if( tea>=2*candy || candy>=2*tea){
+                return 2;
+            }
+            else{
+                return 1;
+            }
+        }
+
+        return 0;
+    }
+
+
+
 
 }
