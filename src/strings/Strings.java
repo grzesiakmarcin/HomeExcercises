@@ -234,6 +234,57 @@ class StringOne{
 
 
 
+    public String fizzString2(int n) {
+
+        if(n%3==0){
+
+            if(n%5==0){
+                return "FizzBuzz!";
+            }
+            return "Fizz!";
+        }
+        else if(n%5==0){
+            return "Buzz!";
+        }
+            return String.valueOf(n)+"!";
+
+
+    }
+
+    public boolean twoAsOne(int a, int b, int c) {
+
+        if(a+b==c||b+c==a||a+c==b){
+
+            return true;
+
+        }
+
+        return false;
+
+    }
+
+    public boolean inOrder(int a, int b, int c, boolean bOk) {
+        if(c>b){
+
+            if(bOk=true){return true;} // cos tu sie wykrzacza w testach - warunek 324 false nie przechodzi
+            else if(b>a){return true;}
+        return false;
+        }
+return false;
+
+
+}
+    public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if(equalOk=false && a<b&& b<c ){return true;}
+        else if(equalOk=true && a<=b &&b<=c){return true;} // cos sie wykrzacza
+
+return false;
+    }
+
+
+
+
+
 
 }
 
