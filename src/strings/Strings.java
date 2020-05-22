@@ -12,8 +12,10 @@ public class Strings {
         s1.middleThree(str);
 
         s1.hasBad(str);
-        System.out.println(sub.substring(sub.length()-1,sub.length()));
 
+
+
+        System.out.println(sub.substring(0,1));
 
         System.out.println( s1.fizzString(sub));
 
@@ -212,19 +214,20 @@ class StringOne{
 
 
     public String fizzString(String str) {
+        String fLetter = "f";
 
-        if(str.substring(0,1)=="f"){
+        if(str.substring(0,1).equals("f")){
 
-            if (str.substring(str.length()-1, str.length())=="b"){
+            if(str.substring(str.length()-1,str.length()).equals("b")){
                 return "FizzBuzz";
             }
 
-
             return "Fizz";
-
         }
-        else if (str.substring(str.length()-1, str.length())=="b"){
+
+        else if(str.substring(str.length()-1,str.length()).equals("b")){
             return "Buzz";
+
         }
         return str;
     }
