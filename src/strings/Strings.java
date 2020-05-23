@@ -282,6 +282,25 @@ return false;
     }
 
 
+    public boolean lastDigit(int a, int b, int c) {
+        String numberA = String.valueOf(a);
+        String numberB = String.valueOf(b);
+        String numberC = String.valueOf(c);
+
+        if((numberA.substring(numberA.length()-1) .equals(numberB.length()-1)) ||numberA.substring(numberA.length()-1) .equals(numberC.length()-1) || numberB.substring(numberA.length()-1) .equals(numberC.length()-1)){
+            return true;
+        }
+        return false;
+
+        //to jest glupie - nie robie w pojedynke
+
+
+
+
+
+
+
+
 
 
 
