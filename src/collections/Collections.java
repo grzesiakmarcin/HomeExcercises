@@ -7,11 +7,11 @@ public class Collections {
 
 
     public static void main(String[] args) {
-        //tworzymy tablicę
+
 
         List<String> lista = new ArrayList<String>();
 
-        //dodajemy elementy typu Object - czyli dowolne, my dodamy ciągi znaków
+        //dodajemy ciągi znaków
         lista.add("Asia");
         lista.add("Basia");
         lista.add("Krzysiek");
@@ -36,6 +36,19 @@ public class Collections {
 
         String imie = (String) lista.get(0);
         System.out.println("Pierwszy element listy to: " + imie);
+
+
+
+        List myList = new ArrayList();
+        myList.add("Magda" );
+        myList.add("Ola" );
+        myList.add("Ksenia" );
+
+        for (Object stringus: myList) {
+            System.out.println((String)stringus);
+        }
+
+
 
     }
 }
