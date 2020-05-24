@@ -86,8 +86,8 @@ public class Collections {
 
         }
         Long stop = System.currentTimeMillis();
-        System.out.println("Rozmiar arrayListy "+mojaArrayLista.size());
-        System.out.println(stop-start);
+        System.out.println("Rozmiar arrayListy "+mojaArrayLista.size()+" czas jej utworzenia: "+(stop-start));
+
 
         start = System.currentTimeMillis();
 
@@ -98,8 +98,8 @@ public class Collections {
         }
         stop=System.currentTimeMillis();
 
-        System.out.println("Rozmiar  linked listy: " + mojaLinkedLista.size());
-        System.out.println(stop-start);
+        System.out.println("Rozmiar  linked listy: " + mojaLinkedLista.size() +" czas jej utworzenia: "+(stop-start));
+
 
         start=System.currentTimeMillis();
         for (int i = 0; i < 1200; i++){
