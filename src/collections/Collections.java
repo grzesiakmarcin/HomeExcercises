@@ -1,7 +1,6 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Collections {
 
@@ -48,6 +47,76 @@ public class Collections {
             System.out.println((String)stringus);
         }
 
+
+        ArrayList<Integer> mojaLista = new ArrayList<Integer>();
+        mojaLista.add(50);
+        mojaLista.add(11);
+        mojaLista.add(43);
+        mojaLista.add(555);
+
+        System.out.println(mojaLista);
+        Object[] mojaTablica= mojaLista.toArray();
+
+        for (Object incik:mojaTablica) {
+            System.out.print(incik +" ");
+        }
+
+        mojaLista.set(0,1);
+        mojaLista.add(0,1122);
+
+        System.out.println(mojaLista);
+        for (Integer incik: mojaLista
+             ) {
+            System.out.println(incik);
+        }
+
+        //  linked list vs array list
+
+
+        ArrayList<Integer> mojaArrayLista = new ArrayList<Integer>();
+        LinkedList<Integer> mojaLinkedLista = new LinkedList<Integer>();
+
+
+        Random rand= new Random();
+        Long start = System.currentTimeMillis();
+
+
+        for (int j =0; j<100000; j++){
+            mojaArrayLista.add(rand.nextInt());
+
+        }
+        Long stop = System.currentTimeMillis();
+        System.out.println("Rozmiar arrayListy "+mojaArrayLista.size());
+        System.out.println(stop-start);
+
+        start = System.currentTimeMillis();
+
+
+        for (int j =0; j<100000; j++){
+            mojaLinkedLista.add(rand.nextInt());
+
+        }
+        stop=System.currentTimeMillis();
+
+        System.out.println("Rozmiar  linked listy: " + mojaLinkedLista.size());
+        System.out.println(stop-start);
+
+        start=System.currentTimeMillis();
+        for (int i = 0; i < 1200; i++){
+            mojaArrayLista.add(200+i,rand.nextInt());
+        }
+        stop=System.currentTimeMillis();
+
+        System.out.println(stop-start + " Czas dodania 1200 elementow do ArrayListy");
+
+
+        start=System.currentTimeMillis();
+        for (int i = 0; i < 1200; i++){
+            mojaLinkedLista.add(200+i,rand.nextInt());
+        }
+        stop=System.currentTimeMillis();
+
+        System.out.println(stop-start + " Czas dodania 1200 elementow do LinkedListy");
 
 
     }
