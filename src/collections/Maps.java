@@ -14,6 +14,7 @@ public class Maps {
         myMap.put(4, "Dylejko");
         myMap.put(5,"Grzesiak");
 
+        myMap.put(1,"Anakonda");
 
         for (String stringus: myMap.values()){
             System.out.println(stringus);
@@ -24,6 +25,8 @@ public class Maps {
         for (Map.Entry<Integer, String> enty : myMap.entrySet()){         // iterowanie po kluczu i wartosci
             System.out.println(enty);
         }
+
+
 
     }
 }
