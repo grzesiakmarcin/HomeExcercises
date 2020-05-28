@@ -6,30 +6,29 @@ import java.util.Map;
 public class Maps {
     public static void main(String[] args) {
 
-        Map <String, String> map = new HashMap<String, String>();
-        map.put("jeden","Arek");
-        map.put("dwa","Kora");
-        map.put("trzy","Szymek");
-        map.put("cztery","Barbara");
-        map.put("pięc","Ala");
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("jeden", "Arek");
+        map.put("dwa", "Kora");
+        map.put("trzy", "Szymek");
+        map.put("cztery", "Barbara");
+        map.put("pięc", "Ala");
 
 
-        if(map.containsKey("cztery")){
-            map.put("b","Wladimir Putin");
-            map.put("b",map.);
+        if (map.containsKey("cztery")) {
+            map.put("b", "Wladimir Putin");
+         //   map.put("b", map.);
 
 
-        for (Map.Entry<String, String> entry: map.entrySet())
-              {
-                  System.out.println(entry.getKey()+" "+entry.getValue());
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                System.out.println(entry.getKey() + " " + entry.getValue());
+
+            }
 
         }
-
     }
-}
 
-class Meeeethods{
-    public Map<String, String> mapBully(Map<String, String> map) {
+    class Meeeethods {
+        public Map<String, String> mapBully(Map<String, String> map) {
 
         /* Make a new empty map
 
@@ -45,23 +44,23 @@ class Meeeethods{
         */
 
 
-        if (map.containsKey("a")) {
+            if (map.containsKey("a")) {
 
-            map.put("b", map.get("a"));
-            map.put("a", "");
+                map.put("b", map.get("a"));
+                map.put("a", "");
+                return map;
+
+            }
+
             return map;
 
         }
 
-        return map;
-
-    }
-
-    public Map<String, String> mapShare(Map<String, String> map) {
+        public Map<String, String> mapShare(Map<String, String> map) {
 
             return map;
+        }
+
+
     }
-
-
-
 }
