@@ -1,9 +1,10 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
-public class UdemyExcercise {
+public class UdemyExercises {
     public static void main(String[] args) {
 
         Figura okrag = new Okrag();
@@ -33,6 +34,15 @@ class Metody{
             System.out.println(mojaLista.pobierzNazwe());
 
         }
+    }
+
+
+    public static void przepiszTabliceDoKolekcji(Object[] tab, Collection<?> c){
+
+        for (Object o:tab){
+           // c.add(o);
+        }
+
     }
 
 }

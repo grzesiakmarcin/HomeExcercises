@@ -101,6 +101,22 @@ public class Collections {
         System.out.println("Rozmiar  linked listy: " + mojaLinkedLista.size() +" czas jej utworzenia: "+(stop-start));
 
 
+        System.out.println("a teraz sprawdzamy przy użyciu iteratora");
+
+
+//      public static void wypiszElementyListy (LinkedList<?> lista){
+//        Iterator iteratorListy= lista.iterator();
+//
+//        while (iteratorListy.hasNext()){
+//                System.out.println(iteratorListy.next());
+//            }
+//        }
+
+
+
+        System.out.println("koniec sprawdzania");
+
+
         start=System.currentTimeMillis();
         for (int i = 0; i < 1200; i++){
             mojaArrayLista.add(200+i,rand.nextInt());
