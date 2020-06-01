@@ -21,10 +21,10 @@ public class Car {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return year == car.year &&
+        if (this == o) return true;       // porównujemy x do x
+        if (o == null || getClass() != o.getClass()) return false;  // sprawdzamy czy obiektt jest nullem, albo jest z innej klasy
+        Car car = (Car) o;  // tutaj zrównujemy obiekt klasy Car z obiektem przeslanym do naszej metody
+        return year == car.year &&   // a tutaj ostateczne porównanie  i dla typów prymitywnych == a dla typów obiektowych equals.
                 model.equals(car.model) &&
                 color.equals(car.color);
     }
