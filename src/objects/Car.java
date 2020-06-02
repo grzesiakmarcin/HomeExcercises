@@ -5,39 +5,66 @@ import java.util.Objects;
 public class Car {
 
     String model;
-    String color;
-    int year;
+    String typ;
+    int rocznik;
+    int moc;
 
-
-
-
-
-
-
-
-
-
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;       // porównujemy x do x
-        if (o == null || getClass() != o.getClass()) return false;  // sprawdzamy czy obiektt jest nullem, albo jest z innej klasy
-        Car car = (Car) o;  // tutaj zrównujemy obiekt klasy Car z obiektem przeslanym do naszej metody
-        return year == car.year &&   // a tutaj ostateczne porównanie  i dla typów prymitywnych == a dla typów obiektowych equals.
-                model.equals(car.model) &&
-                color.equals(car.color);
+    public Car(String model, String typ, int rocznik, int moc) {
+        this.model = model;
+        this.typ = typ;
+        this.rocznik = rocznik;
+        this.moc = moc;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(model, color, year);
+    public boolean equals (Object o){
+        if (this == o) return  true;
+        if (o== null|| this.getClass()!= o.getClass()) return false;
+
+        Car przeslany = (Car) o;
+
+        return this.model.equals(przeslany.model)&& this.typ.equals(przeslany.typ)&& this.moc==przeslany.moc && this.rocznik==przeslany.rocznik;
     }
 
-    public Car (String model, String color, int year){
-        this.color=color;
-        this.model=model;
-        this.year = year;
+    public String getModel() {
+        return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
+
+    public int getRocznik() {
+        return rocznik;
+    }
+
+    public void setRocznik(int rocznik) {
+        this.rocznik = rocznik;
+    }
+
+    public int getMoc() {
+        return moc;
+    }
+
+    public void setMoc(int moc) {
+        this.moc = moc;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", typ='" + typ + '\'' +
+                ", rocznik=" + rocznik +
+                ", moc=" + moc +
+                '}';
+    }
 }
