@@ -22,18 +22,26 @@ public class HashTreeSets {
 // co do zasady - TreeSet jest wolniejszy
 
         Set<Car> carTreeSet = new TreeSet<Car>();
+//
+//        carTreeSet.add(new Car("BMW 4", " kompot",2019,100,123456789));
+//        carTreeSet.add(new Car("BMW 3","kombi",2005,115, 123456789));
+//        carTreeSet.add(new Car("Skoda Octavia","kombi",2004,115, 123456789));
+//        carTreeSet.add(new Car("BMW 3","kombi",2005,115, 12345679));
+//        carTreeSet.add(new Car("BMW 3","kombi",2005,115, 123456789));
+//        carTreeSet.add(new Car("BMW 5","kombi",2005,115, 123456789));
+//        carTreeSet.add(new Car("Mercedes C","kombi",2003,143, 123456789));
 
-        carTreeSet.add(new Car("BMW 4", " kompot",2019,100,123456789));
-        carTreeSet.add(new Car("BMW 3","kombi",2005,115, 123456789));
-        carTreeSet.add(new Car("Skoda Octavia","kombi",2004,115, 123456789));
-        carTreeSet.add(new Car("BMW 3","kombi",2005,115, 12345679));
-        carTreeSet.add(new Car("BMW 3","kombi",2005,115, 123456789));
-        carTreeSet.add(new Car("BMW 5","kombi",2005,115, 123456789));
-        carTreeSet.add(new Car("Mercedes C","kombi",2003,143, 123456789));
 
-        for (Car auto: carTreeSet) {
-            System.out.println(auto.toString());
 
+        for (Integer incik: treeSet) {
+            System.out.println();
+
+        }
+
+
+
+        for (int i=0;i<treeSet.size();i++){
+            System.out.println();
         }
 
     }
