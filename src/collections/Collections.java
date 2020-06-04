@@ -8,6 +8,7 @@ public class Collections {
     public static void main(String[] args) {
 
 
+
         List<String> lista = new ArrayList<String>();
 
         //dodajemy ciągi znaków

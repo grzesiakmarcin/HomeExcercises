@@ -8,12 +8,14 @@ public class Car {
     String typ;
     int rocznik;
     int moc;
+    int VIN;
 
-    public Car(String model, String typ, int rocznik, int moc) {
+    public Car(String model, String typ, int rocznik, int moc, int VIN) {
         this.model = model;
         this.typ = typ;
         this.rocznik = rocznik;
         this.moc = moc;
+        this.VIN = VIN;
     }
 
     @Override
@@ -23,7 +25,16 @@ public class Car {
 
         Car przeslany = (Car) o;
 
-        return this.model.equals(przeslany.model)&& this.typ.equals(przeslany.typ)&& this.moc==przeslany.moc && this.rocznik==przeslany.rocznik;
+        return this.model.equals(przeslany.model) &&
+                this.typ.equals(przeslany.typ)&&
+                this.moc==przeslany.moc &&
+                this.rocznik==przeslany.rocznik &&
+                this.VIN==przeslany.VIN;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, typ, rocznik, moc, VIN);
     }
 
     public String getModel() {
