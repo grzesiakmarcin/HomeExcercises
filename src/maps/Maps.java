@@ -36,6 +36,24 @@ public class Maps {
                 new Pracownik("Jacek"),
                 new Pracownik("Henryk"),
                 new Pracownik("Tyberiusz"),
+                new Pracownik("Agnieszka"),
+                new Pracownik("Janek"),
+                new Pracownik("Marta"),
+                new Pracownik("Jacek"),
+                new Pracownik("Henryk"),
+                new Pracownik("Tyberiusz"),
+                new Pracownik("Agnieszka"),
+                new Pracownik("Janek"),
+                new Pracownik("Marta"),
+                new Pracownik("Jacek"),
+                new Pracownik("Henryk"),
+                new Pracownik("Tyberiusz"),
+                new Pracownik("Agnieszka"),
+                new Pracownik("Janek"),
+                new Pracownik("Marta"),
+                new Pracownik("Jacek"),
+                new Pracownik("Henryk"),
+                new Pracownik("Tyberiusz"),
         };
 
         for (Pracownik ludzik : pracownicy){
@@ -44,6 +62,7 @@ public class Maps {
 
 
         System.out.println("\n"+ "Oto mapa pracowników: "+ "\n " +mapa);
+
 
     }
 }
