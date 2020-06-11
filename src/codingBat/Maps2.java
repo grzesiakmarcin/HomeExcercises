@@ -28,26 +28,12 @@ public class Maps2 {
         Kodzik d = new Kodzik();
 
 
-        String[] tablica = new String[] {"poniedziałek", "wtorek", "sroda", "czwartek", "piatek", "sobota", "jutro poniedzialek"};
+        String[] tablica = new String[] {"poniedziałek", "wtorek", "sroda", "czwartek", "piatek", "sobota", "jutro poniedzialek", "sroda"};
 
 
-        d.wordCount(tablica);
+        d.firstChar(tablica);
 
 
-
-        // tablica wejściowa
-        byte[] tablicaBajtów = new byte[] { 5, 5, 6, 6, 6, 7 };
-        // mapa pomocnicza
-        Map<Integer, Integer> mapa = new HashMap<Integer, Integer>();
-        // zliczanie wystąpień dla każdej wartośći
-        for (byte bajt : tablicaBajtów) {
-            if (mapa.containsKey(Integer.valueOf(bajt))) {
-                Integer wartość = mapa.get(Integer.valueOf(bajt));
-                mapa.put(Integer.valueOf(bajt), wartość + 1);
-            } else {
-                mapa.put(Integer.valueOf(bajt), 1);
-            }
-        }
 
     }
 
@@ -110,20 +96,34 @@ class Kodzik {
         return mojaMapa;
     }
 
-//
-//        Map<String, Integer> myMap = new HashMap<String, Integer>();
-//
-//        for(String stringus: strings) {
-//            if (myMap.containsKey(stringus)){
-//                Integer wartosc = myMap.get(Integer.valueOf(stringus));
-//                myMap.put(stringus,wartosc+1);
-//            }
-//
-//            else {
-//                myMap.put(stringus,1);
-//            }
-//        }
-//        return myMap;
+
+    public Map<String, String> firstChar(String[] strings) {
+
+        Map <String, String > mojaMapa =new HashMap <String, String >();
+
+
+        for(String element : strings){
+            if(mojaMapa.containsKey(element.substring(0,1))){
+
+                String Value = mojaMapa.get(element.substring(0,1));
+                String newValue = Value.concat(element);
+
+                mojaMapa.put(element.substring(0,1), newValue);
+
+
+            }
+            else{
+                mojaMapa.put(element.substring(0,1), element);
+            }
+        }
+
+
+        return mojaMapa;
+
+
+
+    }
+
 
 
 
