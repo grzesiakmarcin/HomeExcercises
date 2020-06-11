@@ -85,6 +85,7 @@ class Kodzik {
 
         for(String stringus: strings) {
             if (myMap.containsKey(stringus)){
+                Integer wartosc = myMap.get(Integer.valueOf(stringus));
                 myMap.put(stringus,wartosc+1);
             }
 
