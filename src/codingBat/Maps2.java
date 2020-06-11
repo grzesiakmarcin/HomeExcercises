@@ -8,6 +8,19 @@ import java.util.Set;
 
 /*
 https://codingbat.com/java/Map-2
+
+ Make a new empty map
+
+        Map<String, String> map = new HashMap<String, String>();
+
+        map.get(key) -- retrieves the stored value for a key, or null if that key is not present in the map.
+
+        map.put(key, value) -- stores a new key/value pair in the map. Overwrites any existing value for that key.
+
+        map.containsKey(key) -- returns true if the key is in the map, false otherwise.
+
+        map.remove(key) -- removes the key/value pair for this key if present. Does nothing if the key is not present
+
  */
 public class Maps2 {
     public static void main(String[] args) {
@@ -81,20 +94,37 @@ class Kodzik {
 
     public Map<String, Integer> wordCount(String[] strings) {
 
-        Map<String, Integer> myMap = new HashMap<String, Integer>();
 
-        for(String stringus: strings) {
-            if (myMap.containsKey(stringus)){
-                Integer wartosc = myMap.get(Integer.valueOf(stringus));
-                myMap.put(stringus,wartosc+1);
+        Map<String, Integer> mojaMapa = new HashMap<String, Integer>();
+
+        for (String element : strings) {
+            if (mojaMapa.containsKey(element)) {
+                Integer iloscWystapienElementu = mojaMapa.get(element);
+                mojaMapa.put(element, iloscWystapienElementu + 1);
+            } else {
+                mojaMapa.put(element, 1);
             }
 
-            else {
-                myMap.put(stringus,1);
-            }
+
         }
-        return myMap;
+        return mojaMapa;
     }
+
+//
+//        Map<String, Integer> myMap = new HashMap<String, Integer>();
+//
+//        for(String stringus: strings) {
+//            if (myMap.containsKey(stringus)){
+//                Integer wartosc = myMap.get(Integer.valueOf(stringus));
+//                myMap.put(stringus,wartosc+1);
+//            }
+//
+//            else {
+//                myMap.put(stringus,1);
+//            }
+//        }
+//        return myMap;
+
 
 
 }
