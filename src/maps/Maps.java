@@ -1,5 +1,6 @@
 package maps;
 
+import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,12 +15,39 @@ public class Maps {
         myMap.put(4, "Dylejko");
         myMap.put(5, "Grzesiak");
 
-        myMap.put(1, "Anakonda");
+
+        System.out.println("-=Lecimy=-");
+
+        // iterowanie po wartosciach
 
         for (String stringus : myMap.values()) {
             System.out.println(stringus);
 
         }
+        System.out.println("\n");
+
+        // iterowanie po kluczach wyhciagając wartosci
+
+        for (Integer klucz: myMap.keySet()) {
+            String wartosc = myMap.get(klucz);
+            System.out.println(klucz+ " : " +wartosc);
+
+        }
+
+
+        System.out.println("\n");
+        // iterowanie po kluczach i wartosciach
+
+        for (Map.Entry<Integer, String> entry:myMap.entrySet()   ) {
+            Integer klucz = entry.getKey();
+            String wartosc = entry.getValue();
+
+            System.out.println(klucz + " : " + wartosc);
+
+        }
+
+
+        System.out.println("\n -== FIN ==-");
 
 
         for (Map.Entry<Integer, String> enty : myMap.entrySet()) {         // iterowanie po kluczu i wartosci
