@@ -119,11 +119,36 @@ class Kodzik {
 
 
         return mojaMapa;
-
-
-
     }
 
+
+    public String wordAppend(String[] strings) {
+        String ciag;
+
+        Map<String, Integer> mojaMapa = new HashMap<String, Integer>();
+
+        for(String stringus : strings){
+            if(!mojaMapa.containsKey(stringus)){
+                mojaMapa.put(stringus,1);
+            }
+            else{
+                mojaMapa.put(stringus,mojaMapa.get(stringus)+1);
+            }
+//
+//            for (
+//                 ) {
+//
+//
+//
+//            }
+
+        }
+
+
+
+        return "ciag" ;
+
+    }
 
 
 
