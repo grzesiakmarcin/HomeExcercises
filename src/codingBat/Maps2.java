@@ -123,9 +123,10 @@ class Kodzik {
 
 
     public String wordAppend(String[] strings) {
-        String ciag;
 
         Map<String, Integer> mojaMapa = new HashMap<String, Integer>();
+        String rezultat = "";
+
 
         for(String stringus : strings){
             if(!mojaMapa.containsKey(stringus)){
@@ -134,19 +135,21 @@ class Kodzik {
             else{
                 mojaMapa.put(stringus,mojaMapa.get(stringus)+1);
             }
-//
-//            for (
-//                 ) {
-//
-//
-//
-//            }
+
+            for (Map.Entry<String, Integer> entry: mojaMapa.entrySet() ) {
+                if(entry.getValue()%2 == 0){
+                   rezultat = entry.getKey();
+                }
+
+
+
+            }
 
         }
 
 
 
-        return "ciag" ;
+        return rezultat ;
 
     }
 
