@@ -1,9 +1,6 @@
 package codingBat;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 /*
@@ -150,6 +147,32 @@ class Kodzik {
 
 
         return rezultat ;
+
+    }
+
+    public Map<String, Boolean> wordMultiple(String[] strings) {
+        Map <String, Integer> countMap = new LinkedHashMap<String,Integer>();
+        Map <String, Boolean> myMap = new HashMap<String, Boolean>();
+
+        for(String stringus : strings){
+            if(!countMap.containsKey(strings)){
+                countMap.put(stringus,1);
+            }
+            else{countMap.put(stringus,countMap.get(stringus)+1);
+            }
+        }
+
+        for (Map.Entry lecimy: countMap.entrySet() ){
+            String key = lecimy.getKey();
+
+            if()
+        }
+
+
+
+
+
+        return myMap;
 
     }
 
