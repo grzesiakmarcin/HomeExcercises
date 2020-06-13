@@ -66,9 +66,7 @@ public class Maps {
 
     public Map<String, String> mapShare(Map<String, String> map) {
 
-        if(map.containsKey("c")){
-            map.remove("c");
-        }
+        map.remove("c");
 
         if(map.containsKey("a")){
             map.put("b", map.get("a"));
@@ -149,21 +147,27 @@ public class Maps {
 
     }
 
+
     public Map<String, String> mapAB4(Map<String, String> map) {
 
-        if(map.containsKey("a")&& map.containsKey("b")) {
+
+        if(map.containsKey("a") && map.containsKey("b")) {
             if (map.get("a").length() > map.get("b").length()) {
                 map.put("c", map.get("a"));
 
             } else if(map.get("a").length() < map.get("b").length()){
                 map.put("c", map.get("b"));
             }
-
+            else if(map.get("a").length() == map.get("b").length()){
+                map.put("a", "");
+                map.put("b", "");
+                map.put("c", map.get("c"));}
         }
 
-        //testy coś nie chcą prześć ale moim zdaniem jest legitnie.
+        return map;
 
-return map;
+        //jakies other tests coś nie chcą prześć ale moim zdaniem jest legitnie.
+
     }
 
 

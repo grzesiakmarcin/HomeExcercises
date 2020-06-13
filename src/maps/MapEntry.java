@@ -2,13 +2,14 @@ package maps;
 
 import objects.Car;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class MapEntry {
     public static void main(String[] args) {
 
-        Map<Integer, Car> mapaSamochodów = new TreeMap<Integer,Car>();
+        Map<Integer, Car> mapaSamochodów = new LinkedHashMap<Integer,Car>();
 
         mapaSamochodów.put(1, new Car("Bmm 3 ", "sedan",2008,198,1231564648));
         mapaSamochodów.put(2, new Car("VW Passat", "kombi",2005,110,121233648));
