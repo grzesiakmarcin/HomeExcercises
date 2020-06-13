@@ -161,12 +161,12 @@ class Kodzik {
             else{countMap.put(stringus,countMap.get(stringus)+1);
             }
         }
-
-        for (Map.Entry lecimy: countMap.entrySet() ){
-            String key = lecimy.getKey();
-
-            if()
-        }
+//
+//        for (Map.Entry lecimy: countMap.entrySet() ){
+//            String key = lecimy.getKey();
+//
+//            if()
+//        }
 
 
 
