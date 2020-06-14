@@ -5,6 +5,7 @@ public class Dab extends Tree {
 
 
     public Dab(String aNazwa, String aCoNaGaleziach, int aIleLat) {
+
         super(aNazwa, aCoNaGaleziach, aIleLat);
     }
 
