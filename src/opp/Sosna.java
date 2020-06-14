@@ -1,6 +1,6 @@
 package opp;
 
-public class Sosna extends Tree {
+public class Sosna extends Tree implements Zimowanie {
 
     public Sosna(String aNazwa, String aCoNaGaleziach, int aIleLat) {
         super(aNazwa, aCoNaGaleziach, aIleLat);
@@ -19,5 +19,10 @@ public class Sosna extends Tree {
     @Override
     public void jakasMetoda() {
         System.out.println("jestem jak pasożyt - urosnę nawet na piachu.");
+    }
+
+    @Override
+    public void zimowanie() {
+        System.out.println("zimowanie nie jest mi straszne");
     }
 }

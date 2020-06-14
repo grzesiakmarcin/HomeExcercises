@@ -1,6 +1,8 @@
 package opp;
 
-public class Dab extends Tree {
+import javax.xml.bind.SchemaOutputResolver;
+
+public class Dab extends Tree implements Zimowanie{
 
 
 
@@ -23,5 +25,11 @@ public class Dab extends Tree {
     public void jakasMetoda() {
         super.jakasMetoda();
         System.out.println("\n Generalnie uważa się mnie za  super drzewo");
+    }
+
+    @Override
+    public void zimowanie() {
+        System.out.println("jak jestem mały to mogę przemarznąc");
+
     }
 }

@@ -1,11 +1,11 @@
 package opp;
 
-public interface Owocuj {
+public interface Owocowanie {
 
     String nazwaOwocu= "owoc";
 
     void owocuj();
-    void zimuj ();
+
 
 
 
