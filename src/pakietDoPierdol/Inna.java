@@ -18,6 +18,41 @@ public class Inna {
 //
 //    }
 //
+        Scanner sc = new Scanner(System.in);
+        boolean result = true;
+        int number = 1;
+        double previousNumber = 13.1415;
+
+
+        while (sc.hasNext()) {
+
+            number = sc.nextInt();
+
+            if (previousNumber == 13.1415) {
+                previousNumber = number;
+            }
+
+            if (number == 0) {
+                break;
+            }
+
+            if (number == (previousNumber) || number == (previousNumber + 1) || number == (previousNumber - 1)) {
+                result = true;
+                previousNumber=number;
+
+            }
+            else{
+                result=false;
+                break;
+
+            }
+
+        }
+
+
+        System.out.println(result);
+
+
 
     }
 }
