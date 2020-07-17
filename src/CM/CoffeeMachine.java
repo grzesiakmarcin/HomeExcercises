@@ -3,159 +3,231 @@ import java.util.Scanner;
 
 
 public class CoffeeMachine {
-    public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
 
-    Resources rs = new Resources();
+            Resources rs = new Resources();
 
-            rs.toStr();
+            rs.stats();
 
-        System.out.println("Write action (buy, fill, take): ");
-    switch (sc.next()) {
-        case "fill":
-            Fill fill = new Fill();
+            System.out.println("Write action (buy, fill, take): ");
+            switch (sc.next()) {
+                case "fill":
+                    Fill fill = new Fill();
+                    fill.fillResources(rs);
+                    rs.stats();
 
+                    System.exit(1);
+                case "take":
+                    Take take = new Take();
+                    take.wydaj(rs);
 
-            break;
-        case "take":
-            Take take = new Take();
-            take.wydaj();
+                    break;
+                case "buy":
+                    Buy buy = new Buy();
+                    buy.buyCoffee(rs);
 
-            break;
-        case "buy":
-            Buy buy = new Buy();
+                    break;
 
-            break;
+                default:
 
-        default:
-            System.out.println("Unsuitable action, system shtu down");
-            System.exit(1);
-    }
-
-
-    // ile wynosza standardowe ilosci kawy
-    int waterStandard = 200;
-    int milkStandard = 50;
-    int coffeeStandard = 15;
-
-    // zasoby naszej maszyny
-
-    int water = sc.nextInt();
-    int milk = sc.nextInt();
-    int coffeeBeans = sc.nextInt();
+                    System.exit(1);
+            }
+            sc.close();
 
 
-    // ilosc możliwej do zrobienia kawy:
+        }
 
-    int ileKawZWody = water / waterStandard;
-    int ileKawZMleka = milk / milkStandard;
-    int ileKawZZiaren = coffeeBeans / coffeeStandard;
-
-    // okreslenie na ile kaw mozemy zrobic;
-
-    int iloscKaw = 0;
-
-    if (ileKawZWody <= ileKawZMleka && ileKawZWody < +ileKawZZiaren) {
-        iloscKaw = ileKawZWody;
-    } else if (ileKawZMleka <= ileKawZWody && ileKawZMleka <= ileKawZZiaren) {
-        iloscKaw = ileKawZMleka;
-    } else if (ileKawZZiaren <= ileKawZWody && ileKawZZiaren <= ileKawZMleka) {
-        iloscKaw = ileKawZZiaren;
 
     }
 
-    int coffeeOrder = sc.nextInt();
+    class Buy {
 
-    if (coffeeOrder > iloscKaw) {
-        System.out.println("No, I can make only " + (iloscKaw) + " cup(s) of coffee");
-    } else if (coffeeOrder == iloscKaw) {
-        System.out.println("Yes, I can make that amount of coffee");
-    } else if (coffeeOrder < iloscKaw) {
-        System.out.println("Yes, I can make that amount of coffee (and even " + (iloscKaw - 1) + " more than that)");
+
+        // ile wynosza standardowe ilosci kawy espresso
+        int waterStandardEspresso = 250;
+        int milkStandardEspresso = 0;
+        int coffeeStandardEspresso = 16;
+        int priseEspresso = 4;
+
+        // ile wynosza standardowe ilosci kawy latte
+        int waterStandardLatte = 350;
+        int milkStandardLatte = 75;
+        int coffeeStandardLatte = 20;
+        int priseLatte = 7;
+
+        // ile wynosza standardowe ilosci kawy cappuccino
+        int waterStandardCappucino = 200;
+        int milkStandardCappucino = 100;
+        int coffeeStandardCappucino = 12;
+        int priseCappucino = 6;
+
+
+        Scanner sc = new Scanner(System.in);
+        Resources Rs = new Resources();
+
+        public Resources buyCoffee(Resources rs) {
+
+            System.out.println("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino:");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1: //espresso
+                    orderEspresso(rs);
+                    Rs.stats();
+                    System.exit(1);
+
+                case 2: // latte,
+                    orderLatte(rs);
+                    Rs.stats();
+                    System.exit(1);
+
+                case 3://cappuccino
+                    orderCappucino(rs);
+                    Rs.stats();
+                    System.exit(1);
+
+            }
+            sc.close();
+            return  rs;
+
+        }
+
+        public Resources orderEspresso(Resources rs) {
+            Rs.setMoney(Rs.getMoney() + priseEspresso);
+            Rs.setWater(Rs.getWater() - waterStandardEspresso);
+            Rs.setCoffeeBeans(Rs.getCoffeeBeans() - coffeeStandardEspresso);
+            Rs.setDisposaleCups(Rs.getDisposaleCups() - 1);
+
+            return rs;
+        }
+
+        public Resources orderLatte(Resources rs) {
+            Rs.setMoney(Rs.getMoney() + priseLatte);
+            Rs.setWater(Rs.getWater() - waterStandardLatte);
+            Rs.setCoffeeBeans(Rs.getCoffeeBeans() - coffeeStandardLatte);
+            Rs.setMilk(Rs.getMilk() - milkStandardLatte);
+            Rs.setDisposaleCups(Rs.getDisposaleCups() - 1);
+            return rs;
+        }
+
+        public Resources orderCappucino(Resources rs) {
+            Rs.setMoney(Rs.getMoney() + priseCappucino);
+            Rs.setWater(Rs.getWater() - waterStandardCappucino);
+            Rs.setCoffeeBeans(Rs.getCoffeeBeans() - coffeeStandardCappucino);
+            Rs.setMilk(Rs.getMilk() - milkStandardCappucino);
+            Rs.setDisposaleCups(Rs.getDisposaleCups() - 1);
+
+            return rs;
+        }
+
+
     }
 
-
-}
-
-
-}
-
-class Buy {
+    class Fill {
+        Scanner sc = new Scanner(System.in);
 
 
-    // ile wynosza standardowe ilosci kawy espresso
-    int waterStandardEspresso = 250;
-    int milkStandardEspresso = 0;
-    int coffeeStandardEspresso = 16;
-    int priseEspresso = 4;
+        public Resources fillResources(Resources rs) {
 
-    // ile wynosza standardowe ilosci kawy latte
-    int waterStandardLatte = 350;
-    int milkStandardLatte = 75;
-    int coffeeStandardLatte = 20;
-    int priseLatte = 7;
+            System.out.println("Write how many ml of water do you want to add:");
+            sc.nextInt();
+           // rs.setWater(rs.getWater()+sc.nextInt());
 
-    // ile wynosza standardowe ilosci kawy cappuccino
-    int waterStandardCappucino = 200;
-    int milkStandardCappucino = 100;
-    int coffeeStandardCappucino = 12;
-    int priseCappucino = 6;
+            System.out.println("Write how many ml of milk do you want to add: ");
+          //  rs.setMilk(rs.getMilk() + sc.nextInt());
+            sc.nextInt();
+
+            System.out.println("Write how many grams of coffee beans do you want to add: ");
+         //   rs.setCoffeeBeans(rs.getCoffeeBeans() + sc.nextInt());
+            sc.nextInt();
+
+            System.out.println("Write how many disposable cups of coffee do you want to add: ");
+          //  rs.setDisposaleCups(rs.getDisposaleCups() + sc.nextInt());
+            sc.nextInt();
 
 
-    Scanner sc = new Scanner(System.in);
+            return rs;
 
-    public void buy() {
+        }
 
-        System.out.println("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino:");
-        int choice = sc.nextInt();
-        switch (choice) {
-            case 1:
-                // espresso;
 
-            case 2:
-                // latte,
-            case 3:
-                //cappuccino
+
+    }
+
+    class Take {
+
+
+
+        public Resources  wydaj(Resources rs) {
+
+            System.out.println("I gave you " + rs.getMoney());
+            rs.setMoney(0);
+            System.out.println("The coffee machine has: ");
+            System.out.println(rs.getWater() + " of water");
+            System.out.println(rs.getMilk() + " of milk");
+            System.out.println(rs.getCoffeeBeans() + " of coffee beans");
+            System.out.println(rs.getDisposaleCups() + " of disposable cups");
+            System.out.println(rs.getMoney() + " of money");
+
+            return rs;
+
+
         }
     }
 
+    class Resources {
+        private int money = 550;
+        private int water = 400;
+        private int milk = 540;
+        private int coffeeBeans = 120;
+        private int disposaleCups = 9;
 
-}
+        public void stats() {
+            System.out.println("The coffee machine has:");
+            System.out.println(water + " of water");
+            System.out.println(milk + " of milk");
+            System.out.println(coffeeBeans + " of coffee beans");
+            System.out.println(disposaleCups + " of disposable cups");
+            System.out.println(money + " of money" + "\n");
+        }
 
-class Fill {
-}
+        public int getMoney() {
+            return money;
+        }
 
-class Take {
+        public void setMoney(int money) {
+            this.money = money;
+        }
 
-    public void wydaj() {
-        System.out.println("I gave you " + Resources.money);
-        Resources.money = 0;
-        System.out.println("The coffee machine has: ");
-        System.out.println(Resources.water + " of water");
-        System.out.println(Resources.milk + " of milk");
-        System.out.println(Resources.coffeeBeans + " of coffee beans");
-        System.out.println(Resources.disposaleCups + " of disposable cups");
-        System.out.println(Resources.money + " of money");
+        public int getWater() {
+            return water;
+        }
 
+        public void setWater(int water) {
+            this.water = water;
+        }
+
+        public int getMilk() {
+            return milk;
+        }
+
+        public void setMilk(int milk) {
+            this.milk = milk;
+        }
+
+        public int getCoffeeBeans() {
+            return coffeeBeans;
+        }
+
+        public void setCoffeeBeans(int coffeeBeans) {
+            this.coffeeBeans = coffeeBeans;
+        }
+
+        public int getDisposaleCups() {
+            return disposaleCups;
+        }
+
+        public void setDisposaleCups(int disposaleCups) {
+            this.disposaleCups = disposaleCups;
+        }
     }
-}
-
-class Resources {
-    static int money = 550;
-    static int water = 400;
-    static int milk = 540;
-    static int coffeeBeans = 120;
-    static int disposaleCups = 9;
-
-   public void toStr(){
-       System.out.println("The coffee machine has:");
-       System.out.println(Resources.water + " of water");
-       System.out.println(Resources.milk + " of milk");
-       System.out.println(Resources.coffeeBeans + " of coffee beans");
-       System.out.println(Resources.disposaleCups + " of disposable cups");
-       System.out.println(Resources.money + " of money");
-   }
-
-
-
-}
