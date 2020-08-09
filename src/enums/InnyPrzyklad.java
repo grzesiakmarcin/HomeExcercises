@@ -7,13 +7,45 @@ enum TshirtSize{
 
 
 }
+enum Animals{
+    CAT, DOG, MOUSE
+}
+
+
+
 
 public class InnyPrzyklad {
     public static void main(String[] args) {
-        movieTypes mT=movieTypes.BORING;
-        System.out.println(mT);
-        System.out.println("---");
-        System.out.println(mT.ordinal());
+
+
+
+
+
+    }
+
+
+}
+
+class App {
+    public static void main(String[] args) {
+        Animals anim =Animals.DOG;
+
+        switch (anim){
+            case DOG:
+                System.out.println("piesek");
+                break;
+            case CAT:
+                System.out.println("jebany kotek");
+                break;
+
+            case MOUSE:
+                System.out.println("myszka");
+                break;}
+
+        System.out.println(Animals.DOG.getClass());
+        System.out.println(Animals.DOG instanceof Animals);
+
+
 
 
 

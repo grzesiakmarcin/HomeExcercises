@@ -19,6 +19,35 @@ public class loops {
         nC.addTable(tab2);
 
 
+        int [] tablica = new int []{69,1,2,3,4,5};
+
+        for (int i =0; i<=tablica.length;i++){
+            System.out.print(i+" ");
+        }
+
+        int zastepcza = tablica[tablica.length-1];
+
+
+        System.out.println( " ")
+        ;
+        System.out.println("odliczanie po tablicy");
+        for (int i =tablica.length-1; i>=0;i--){
+            System.out.print(i+" ");
+        }
+        System.out.println("");
+
+        System.out.println(" koniec odliczenia");
+
+        // drukuj tablice3
+
+        System.out.println("drukuj tablice");
+        for (int i : tablica) {
+            System.out.print(i+" ");
+        }
+
+
+
+
 
 
 
