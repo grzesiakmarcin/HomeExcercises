@@ -19,9 +19,8 @@ public class TshirtMainShop {
 
         List<Tshirt> poRozmiarze = sklep.getTshirtsBySize(EnumTshirtSize.L);
 
-        for (Tshirt koszulka: poRozmiarze
-             ) {
-            System.out.println(koszulka);
+        for (Object koszulka: poRozmiarze) {
+            System.out.println((Tshirt) koszulka);
 
         }
 
