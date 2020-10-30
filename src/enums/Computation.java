@@ -1,8 +1,7 @@
 package enums;
 
 public enum Computation {
-    ADDITION {
-        public double perform(double x, double y) {
+    ADDITION {public double perform(double x, double y) {
             return x + y;
         }
     },

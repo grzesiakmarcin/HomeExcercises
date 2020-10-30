@@ -1,5 +1,6 @@
 package enum2;
 
+import javax.swing.*;
 import java.util.List;
 
 public class TshirtMainShop {
@@ -19,15 +20,43 @@ public class TshirtMainShop {
 
         List<Tshirt> poRozmiarze = sklep.getTshirtsBySize(EnumTshirtSize.L);
 
-        for (Object koszulka: poRozmiarze) {
-            System.out.println((Tshirt) koszulka);
+        for (Tshirt koszulka : poRozmiarze) {
+            System.out.println(koszulka);
 
         }
 
+        System.out.println(EnumTshirtSize.S.name());
+
+
+        System.out.println("-------------=======drukuj zawartosc enuma===============--------------");
+
+        for (EnumTshirtSize cosik: EnumTshirtSize.values()) {
+            System.out.println(cosik);
 
         }
+
+        System.out.println("-------------======================--------------");
+        System.out.println(EnumTshirtSize.S.name());
+
+        //for (EnumTshirtSize cosik2: EnumTshirtSize.valueOf(EnumTshirtSize.L)
+          //   ) {
+
+        //}
+        System.out.println("------===========miejsce w ktorym znajduje sie typ w liscie typow=========----------" );
+        System.out.println(EnumTshirtSize.XL.ordinal());
+
+        System.out.println("----------============= jedna z wartosci ==========-----------");
+        System.out.println("wymiar w klatce piersiowej dla  "+EnumTshirtSize.S.name()+" "+EnumTshirtSize.S.chestLength);
+
+
+
+
+
 
     }
+
+
+}
 
 
 

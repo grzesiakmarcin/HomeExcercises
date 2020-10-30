@@ -2,11 +2,12 @@ package enum2;
 
 public enum EnumTshirtSize {
     XS(70, 20, 70),
-    S(75,25,75),
-    M(77,27,77),
-    L(80,30,80),
-    XL(84,34,84),
-    XXL(90,40,95);
+
+    S(75, 25, 75) ,
+    M(77, 27, 77) ,
+    L(80, 30, 80),
+    XL(84, 34, 84),
+    XXL(90, 40, 95) ;
 
 
     int chestLength;
