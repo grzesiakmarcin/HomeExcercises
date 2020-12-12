@@ -7,5 +7,19 @@ public class Klasa {
                 System.out.println(planet);
             }
         }
+
+
+        UsersStatus active= UsersStatus.ACTIVE;
+
+        System.out.println(active.name());
+        System.out.println(active.ordinal());
+
+        for ( UsersStatus jakis: UsersStatus.values()
+             ) {
+            System.out.println(jakis);
+
+        }
+
+
     }
 }
