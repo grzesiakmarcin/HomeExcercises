@@ -1,6 +1,6 @@
 package enums;
 
-import javax.crypto.spec.PSource;
+
 
 enum Direction {
     EAST("E"),
@@ -16,6 +16,18 @@ enum Direction {
 
     public String getShortCode() {
         return this.shortCode;
+    }
+
+    public static Direction checkIfDirectionNORTH(Direction enums){
+        for (Direction eeee: Direction.values()) {
+            if(eeee==Direction.NORTH){
+                System.out.println("Kierunek wieczna zima.");
+            }
+
+        }
+
+        return null;
+
     }
 
 
@@ -88,6 +100,16 @@ class Jedziemy{
               break;
 
       }
+        for (Direction cosik: Direction.values()) {
+            System.out.println(cosik);
+
+        }
+
+
+   Direction.checkIfDirectionNORTH(rzeczonyObiekt.getKierunek());
+
+
+
 
 
     }
