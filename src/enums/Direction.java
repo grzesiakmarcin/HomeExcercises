@@ -1,6 +1,8 @@
 package enums;
 
-public enum Direction {
+import javax.crypto.spec.PSource;
+
+enum Direction {
     EAST("E"),
     WEST("W"),
     NORTH("N"),
@@ -15,7 +17,81 @@ public enum Direction {
     public String getShortCode() {
         return this.shortCode;
     }
+
+
+
 }
 
+class JakisObiekt{
+    String name;
+    int jakisNumer;
+    Direction kierunek;
+
+    public JakisObiekt(String name, int jakisNumer,Direction kierunek){
+        this.name=name;
+        this.jakisNumer=jakisNumer;
+        this.kierunek=kierunek;
+    }
+
+    public Direction getKierunek(){
+        return kierunek;
+    }
+
+    public int getJakisNumer(){
+        return jakisNumer;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setJakisNumer(int jakisNumer){
+        this.jakisNumer=jakisNumer;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setKierunek(Direction kierunek) {
+        this.kierunek = kierunek;
+    }
+
+    @Override
+    public String toString() {
+        return "JakisObiekt{" +
+                "name='" + name + '\'' +
+                ", jakisNumer=" + jakisNumer +
+                ", kierunek=" + kierunek +
+                '}';
+    }
+}
+
+
+class Jedziemy{
+    public static void main(String[] args) {
+
+        JakisObiekt rzeczonyObiekt = new JakisObiekt("Jestem Obiektem", 12, Direction.NORTH);
+
+      switch(rzeczonyObiekt.getKierunek()){
+          case NORTH:
+              System.out.println("Nakurwiamy na północ");
+              break;
+          case SOUTH:
+              System.out.println("Nakurwiamy na południe");
+              break;
+          case EAST:
+              System.out.println("Nakurwiamy na wschód");
+              break;
+          case WEST:
+              System.out.println("Nakurwiamy na zachód");
+              break;
+
+      }
+
+
+    }
+
+}
 
 
