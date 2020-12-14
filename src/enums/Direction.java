@@ -106,7 +106,26 @@ class Jedziemy{
         }
 
 
+        if(rzeczonyObiekt.getKierunek()==Direction.NORTH){
+            System.out.println("nie ejdziemy na poł€dnie");
+        }
+
+
    Direction.checkIfDirectionNORTH(rzeczonyObiekt.getKierunek());
+
+        System.out.println(Direction.NORTH.ordinal());
+        System.out.println(Direction.NORTH.name());
+        System.out.println(Direction.valueOf("SOUTH"));
+
+
+
+        String toStrinnnng= Direction.NORTH.toString();
+        String toname = Direction.NORTH.name();
+        String toShortCoddsa = Direction.NORTH.getShortCode();
+
+        System.out.println(toStrinnnng + " " +toname+ " "+ toShortCoddsa );
+
+        System.out.println(Direction.valueOf("N"));
 
 
 
