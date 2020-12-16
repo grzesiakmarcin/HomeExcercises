@@ -32,6 +32,7 @@ enum Direction {
 
 
 
+
 }
 
 class JakisObiekt{
@@ -126,6 +127,7 @@ class Jedziemy{
         System.out.println(toStrinnnng + " " +toname+ " "+ toShortCoddsa );
 
         System.out.println(Direction.valueOf("N"));
+
 
 
 
