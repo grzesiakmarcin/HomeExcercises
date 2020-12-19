@@ -8,17 +8,25 @@ package pakietDoPierdol;
         this.name = name;
     }
 
-    public  class Bow {
-        String colour;
-
-        public Bow(String colour) {
-            this.colour = colour;
-        }
-
-        public void printColour() {
-            System.out.println("Cat " + Cat.this.name + " has " +this.colour +" łuk." );
-        }
+    private void sayMeow(){
+        System.out.println(this.name + " powiedz  meoooooaaaaawwwww");
     }
+
+                     public  class Bow {
+                          String colour;
+
+                          public Bow(String colour) {
+                              this.colour = colour;
+                             }
+                             public void printColour() {
+                             System.out.println("Cat " + Cat.this.name + " has " +this.colour +" łuk." );
+                              }
+
+                              public void putOnABow(){
+                             sayMeow();
+                             System.out.println("założyłem na " + Cat.this.name +" ten "+ this.colour +" łuk");
+                              }
+                     }
 }
 
  class JakisTamMain{
@@ -31,5 +39,17 @@ package pakietDoPierdol;
 
        łuk.printColour();
 
+       Cat.Bow jeszczeInnyLuk  =kotek.new Bow ("czarny jak smoła");
+
+       jeszczeInnyLuk.printColour();
+
+
+
+       jeszczeInnyLuk.putOnABow();
+
+       Cat bonifacy = new Cat ("Bonifacy");
+       Cat.Bow lukBonifacego = bonifacy.new Bow("Biały jak amfa");
+
+       lukBonifacego.putOnABow();
     }
 }
