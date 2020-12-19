@@ -5,17 +5,20 @@ public class MultiDim {
 
         int[][] mojaTablica;
 
-        mojaTablica = new int[][]{  {1, 2, 3, 4},
-                                    {2, 33, 25,},
-                                    {55},
-                                    {21, 11, 33}};
+        mojaTablica = new int[][]{ {1, 2, 13, 4},
+                                   {2, 33, 25,4},
+                                   {55,533,12,15},
+                                   {21, 11, 33,12}};
 
 
+        for (int rzad=0; rzad< mojaTablica.length;rzad++){
+           for (int kolumna=0; kolumna< mojaTablica.length;kolumna++){
+               System.out.print(mojaTablica[rzad][kolumna]+" ");
+           }
+            System.out.println();
 
-
-        for (int i=0; i<= mojaTablica.length;i++){
-            System.out.println(mojaTablica[i][mojaTablica[0][mojaTablica.length-1]]);
         }
+
 
     }
 }
