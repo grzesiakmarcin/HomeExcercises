@@ -61,11 +61,7 @@ class Employee extends Person {
     }
 
 
-    @Override
-    void metodka1() {
-        super(napis)
 
-    }
 }
 
 class JakisMain{
