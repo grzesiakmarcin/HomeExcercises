@@ -3,11 +3,13 @@ package projekty;
 import java.util.Scanner;
 
 public class Gra {
-    public static void main(String[] args) {
+    public  void main() {
 
         int cows = 0;
         int bulls = 0;
 
+
+        System.out.println("Wprowadz kod");
         Scanner sc = new Scanner(System.in);
         String password = sc.next();
         String guess = sc.next();
@@ -18,8 +20,6 @@ public class Gra {
         passArray = new ArrayMaker().makeArrayFromString(passArray, password);
         guessArray = new ArrayMaker().makeArrayFromString(guessArray, guess);
 
-
     }
-
-
 }
+
