@@ -1,27 +1,21 @@
 package pakietDoPierdol;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class arrays {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int size = scanner.nextInt();
-        int[] array = new int[size];
+   BigInteger eec =  BigInteger.TEN;
+   BigInteger dee =  BigInteger.TWO;
 
-        for (int i = 0; i < size; i++) {
-            array[i] = scanner.nextInt();
-        }
+        System.out.println(eec=eec.multiply(dee));
 
-        int[] newArray = new int[size];
+        System.out.println(eec);
 
-        for (int i = 0; i < size; i++) {
-            newArray[(i + 1) % size] = array[i];
-        }
 
-        for (int elem : newArray) {
-            System.out.print(elem + " ");
-        }
+
+
     }
 }
