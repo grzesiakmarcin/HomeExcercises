@@ -8,14 +8,13 @@ public class MultiDimArrays {
 //        Napisz program pobierający trójelementową tablicę liczb i zwracający największą liczbę.
 
 
+        myClass zliczaj = new myClass();    // w innej klasie mam metody do zliczania
 
-        myClass zliczaj=new myClass();    // w innej klasie mam metody do zliczania
 
+        int[] tablicaOne = {2, 4, 3, 6};
 
-        int [] tablicaOne = {2,4,3,6};
-
-            zliczaj.getSum(tablicaOne);
-            zliczaj.getHighest(tablicaOne);
+        zliczaj.getSum(tablicaOne);
+        zliczaj.getHighest(tablicaOne);
 
 /**
  * ponizej deklararowanie elementów tablicy na dwa sposoby
@@ -43,28 +42,41 @@ public class MultiDimArrays {
 
         for (int wiersz = 0; wiersz <= jeszczeInnaTablica.length - 1; wiersz++) {
             for (int pozycja = 0; pozycja < jeszczeInnaTablica.length - 1; pozycja++)
-                System.out.print(jeszczeInnaTablica[wiersz][pozycja]+" ");
+                System.out.print(jeszczeInnaTablica[wiersz][pozycja] + " ");
 
 
         }
 
+        System.out.println();
 
 
+        String[][] mojeStingi = {{"Aniela", "Ignac"},
+                {"Ala", "Leszek"},
+                {"Ula", "Stasiu"},
+                {"Teresa", "Czesław"},
+        };
 
+        for (int i =0; i < mojeStingi.length;i++) {
+            for (int j =1; j < 2; j++) {
+                System.out.print(mojeStingi[i][j]+" ");
+
+            }
+            System.out.println( );
+        }
 
 
     }
 }
 
 
-class myClass{
+class myClass {
 
 
-    public void getSum(int [] array){
-        int liczymy=0;
+    public void getSum(int[] array) {
+        int liczymy = 0;
 
-        for (int incik:array) {
-            liczymy=liczymy+incik;
+        for (int incik : array) {
+            liczymy = liczymy + incik;
 
 
         }
@@ -74,36 +86,29 @@ class myClass{
     }
 
 
-public void getHighest(int []array){
-        int higghest=0;
+    public void getHighest(int[] array) {
+        int higghest = 0;
 
-    for (int incik:array) {
-        if (higghest < incik) {
-            higghest = incik;
+        for (int incik : array) {
+            if (higghest < incik) {
+                higghest = incik;
+            }
         }
-    }
         System.out.println(higghest);
 
 
-}
+    }
 
 
+    public void getSumMulti(int[][] array) {
+        int count = 0;
 
+        for (int wiersz = 0; wiersz > array.length - 1; wiersz++) {
 
-
-
-
-
-    public void getSumMulti(int[][] array){
-        int count=0;
-
-        for (int wiersz=0; wiersz>array.length-1; wiersz++){
-
-            for (int pozycja =0; pozycja>array.length-1; wiersz++){
+            for (int pozycja = 0; pozycja > array.length - 1; wiersz++) {
                 System.out.println(array[wiersz][pozycja]);
-                count=count+pozycja;
+                count = count + pozycja;
             }
-
 
 
         }
