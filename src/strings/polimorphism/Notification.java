@@ -15,6 +15,9 @@ public class Notification {
     public String getMsg() {
         return msg;
     }
+
+
+
 }
 
 class Warning extends Notification {
@@ -69,5 +72,15 @@ class Main {
         System.out.println();
         pacjent.toString();
 
+       // Publication publikacja= new Publication("Don Stanislavo");
+       // System.out.println(publikacja.getInfo());
+
+        Newspaper newspaper = new Newspaper("CR7 w Juve", "sport.onet.pl");
+        Article artykul = new Article("bunt kobiet","Kamil duroczok");
+        Announcement Skoda = new Announcement("Sprzedam skode",15);
+
+        Publication pNewspaper = new Newspaper("publikacja ala newspaper", "tvn24.pl");
+       // System.out.println(pNewspaper.getInfo());
+        System.out.println(pNewspaper.getInfo());
     }
 }
