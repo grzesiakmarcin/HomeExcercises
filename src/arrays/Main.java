@@ -36,10 +36,19 @@ class Bebechy {
         System.out.println("utowrzylem set");
 
 
+//
+//        do {
+//            lista.add((charCyfraRoznaOdZera()));
+//        } while (ileCyfr > lista.size());
 
-        do {
-            lista.add((charCyfraRoznaOdZera()));
-        } while (ileCyfr > lista.size());
+
+        if(lista.isEmpty()){
+            lista.add(charCyfraRoznaOdZera());
+        }
+        while (ileCyfr> lista.size()){
+            lista.add(charCyfraRoznaOdZera());
+
+        }
 
 
 
