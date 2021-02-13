@@ -6,15 +6,27 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Bebechy o = new Bebechy();
-        Scanner sc = new Scanner(System.in);
+//        Bebechy o = new Bebechy();
+//        Scanner sc = new Scanner(System.in);
+//
+//
+//
+//        System.out.println("Podaj długość hasła");
+//        int dlugoscHasla = sc.nextInt();
+//
+//        o.metodka(dlugoscHasla);
+
+        String[] tab= new String[1];
+        tab[0]="romek";
+       // tab[1]="tomek";
+
+
+        for(String element : tab){
+            System.out.println(element);
+        }
 
 
 
-        System.out.println("Podaj długość hasła");
-        int dlugoscHasla = sc.nextInt();
-
-        o.metodka(dlugoscHasla);
     }
 
 
@@ -82,7 +94,12 @@ class Bebechy {
 
         char[] tablica = String.valueOf(randomDigit).toCharArray();
 
+
         return tablica[0];
     }
+
+
+
+
 
 }
