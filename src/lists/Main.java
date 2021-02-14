@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
    ArrayList<String> listaStringow = new ArrayList<String>(50);
-   listaStringow.add("Tomek");
+   listaStringow.add("ala");
    listaStringow.add("Kasia");
    listaStringow.add("Leszek");
 
