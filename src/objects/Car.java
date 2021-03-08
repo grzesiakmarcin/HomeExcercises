@@ -10,6 +10,10 @@ public class Car {
     int moc;
     int VIN;
 
+    public Car (){
+        System.out.println("No i proszę - defaultowy konstruktor");
+    }
+
     public Car(String model, String typ, int rocznik, int moc, int VIN) {
         this.model = model;
         this.typ = typ;
