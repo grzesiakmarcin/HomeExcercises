@@ -13,6 +13,15 @@ public class Person {
         this.address = address;
     }
 
+
+    void metodka1(){
+        int xx = 12;
+        String napis = "znowu 12";
+
+
+        System.out.println("\nCyfra na dziś to : " +xx+ "\n " +napis);
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -50,6 +59,9 @@ class Employee extends Person {
                 ", salary=" + salary +
                 '}';
     }
+
+
+
 }
 
 class JakisMain{
@@ -57,6 +69,8 @@ class JakisMain{
         Employee pracownik1 = new Employee("Stas",2020/1/02, "Leszno",5006L);
 
         System.out.println(pracownik1.toString());
+
+        pracownik1.metodka1();
 
 
     }

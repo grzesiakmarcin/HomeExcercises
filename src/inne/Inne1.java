@@ -1,46 +1,58 @@
 package inne;
 
+import java.util.Random;
+
 public class Inne1 {
 
     public static void main(String[] args) {
         char letter = 'A';
 
 
-        while (letter!='['){
+        while (letter != '[') {
             System.out.print(letter);
             letter++;
         }
-        System.out.println((byte)10);
+        System.out.println((byte) 10);
 
         int a = 12;
         int b = 5;
         int c = 2;
 
         double d = 1.50511e+4;
-        System.out.println((int)d);
+        System.out.println((int) d);
 
 
-        double posInf=Double.POSITIVE_INFINITY;
+        double posInf = Double.POSITIVE_INFINITY;
         System.out.println(posInf);
-        double anotherPosInf = 1/0.0;
+        double anotherPosInf = 1 / 0.0;
         System.out.println(anotherPosInf);
         System.out.println(1.0 / 0.0 == Double.POSITIVE_INFINITY);
 
 
-        JakasTamKlasa obiekt1= new JakasTamKlasa("Kaja",12,"nowak" );
+        JakasTamKlasa obiekt1 = new JakasTamKlasa("Kaja", 12, "nowak");
         System.out.println("przed zmianami");
 
-        System.out.println(obiekt1.toString()+"\n");
+        System.out.println(obiekt1.toString() + "\n");
         obiekt1.jakasTamMetoda(obiekt1);
-        System.out.println("po zmianach"+"\n");
+        System.out.println("po zmianach" + "\n");
         System.out.println(obiekt1.toString());
+
+
+        System.out.println("nadchodzi cyfra różna od zera");
+        System.out.println(obiekt1.cyfraRoznaOdZera());
+
+
+        int[] nowaTablica = {1, 2, 3, 4, 5, 6};
+        int hahha = 1;
+
+       // System.out.println(obiekt1.zwrocCyfreJesliNieWystapila(1, nowaTablica));
 
 
     }
 
 }
 
-class JakasTamKlasa{
+class JakasTamKlasa {
     String name;
     int liczba1;
     String secondName;
@@ -85,14 +97,33 @@ class JakasTamKlasa{
     }
 
 
-    public JakasTamKlasa jakasTamMetoda (JakasTamKlasa obiekt){
-        setName(obiekt.getName()+" godek");
-        if (obiekt.getLiczba1()%2==0){
-            obiekt.setLiczba1(obiekt.getLiczba1()+11);
+    public JakasTamKlasa jakasTamMetoda(JakasTamKlasa obiekt) {
+        setName(obiekt.getName() + " godek");
+        if (obiekt.getLiczba1() % 2 == 0) {
+            obiekt.setLiczba1(obiekt.getLiczba1() + 11);
         }
         obiekt.setSecondName("Tylko Opel");
         return obiekt;
     }
 
+    public int cyfraRoznaOdZera() {
+        Random cyfra = new Random();
+        int randomDigit = 0;
 
+        while (randomDigit == 0) {
+            randomDigit = cyfra.nextInt(10);
+        }
+
+        return randomDigit;
+    }
+
+    public int zwrocCyfreJesliNieWystapila(int input, int[] tablica, int pole) {
+
+        if (input != tablica[pole]) {
+            return input;
+        } else {
+            return zwrocCyfreJesliNieWystapila(input, tablica, pole + 1);
+        }
+
+    }
 }
