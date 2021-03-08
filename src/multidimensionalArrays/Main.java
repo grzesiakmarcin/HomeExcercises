@@ -38,7 +38,7 @@ public class Main {
 
 
         int currentRow = 0;
-        boolean stopCounting = false;
+        boolean stopSearching = false;
         int answer = 0;
 
 
@@ -46,12 +46,13 @@ public class Main {
             for (int j = 0; j < cinema[i].length - 1; j++) {
 
                 if (howManyTickers == 1) {
+                    if (cinema[i][j] == 0) {
 
-
-                    if (stopCounting != true) {
-                        answer = (currentRow + 1);
+                        if (stopSearching != true) {
+                            answer = (currentRow + 1);
+                        }
+                        stopSearching = true;
                     }
-                    stopCounting = true;
                 } else {
 
 
@@ -59,22 +60,21 @@ public class Main {
                         counter = 0;
                         moreThanOne = 0;
                         currentRow++;
+
+
                     } else {
 
                         if (cinema[i][j] == 0) {
                             counter++;
-
                             if (cinema[i][j + 1] == 0) {
                                 moreThanOne++;
+                                if ((moreThanOne + 1) == howManyTickers) {
 
-                                if (moreThanOne + 1 >= howManyTickers) {
 
-                                    // System.out.println("udało się: "+(currentRow + 1));
-
-                                    if (stopCounting != true) {
+                                    if (stopSearching != true) {
                                         answer = (currentRow + 1);
                                     }
-                                    stopCounting = true;
+                                    stopSearching = true;
 
 
                                 }
@@ -90,8 +90,8 @@ public class Main {
         }
 
 
-        System.out.println(answer != 0 ? answer : 0);
-
+        System.out.println(answer);
+        //  System.out.println(answer != 0 ? answer : 0);
 
     }
 }
