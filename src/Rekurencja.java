@@ -1,23 +1,45 @@
 public class Rekurencja {
     public static void main(String[] args) {
 
-        Rekurencja r= new Rekurencja();
 
-        int liczba=5;
-        int result=r.metodaRekurencyjna(liczba);
-
-        System.out.println("silnia z "+liczba+" wynosi: "+result);
-
+        podaj(0);
+        podaj(1);
+        podaj(2);
+        podaj(3);
+        podaj(4);
+        podaj(5);
+        podaj(6);
+        podaj(7);
 
 
     }
 
-    public int metodaRekurencyjna(int cyfra){
-        if(cyfra==1){
-            return 1;
+    public static long fib(long n) {
+
+        if (n <= 1) return n;
+
+        return fib(n - 2) + fib(n - 1);
+
+
+    }
+
+    public static void podaj(int n) {
+        long ans = fib(n);
+        if (n % 2 == 0) {
+            ans = ans * -1;
+            System.out.println(ans);
         }
-        else {
-            return cyfra * metodaRekurencyjna(cyfra - 1);
+        else
+            System.out.println(ans);
+
+    }
+
+
+    public static void modulo(int liczba) {
+        if (liczba % 2 == 0) {
+            System.out.println("parzysta");
+        } else {
+            System.out.println("nie parzysta");
         }
     }
 
