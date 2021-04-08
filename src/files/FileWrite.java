@@ -61,11 +61,12 @@ public class FileWrite {
         writer.close();
 
 
-        try (PrintWriter printWriter = new PrintWriter(file,true)) {
+        try (PrintWriter printWriter = new PrintWriter(file)) {
             printWriter.print("Hello "); // prints a string
             printWriter.println("Java"); // prints a string and then terminates the line
             printWriter.println(123); // prints a number
             printWriter.printf("You have %d %s", 400, "gold coins"); // prints a formatted string
+
         } catch (IOException e) {
             System.out.printf("An exception occurs %s", e.getMessage());
         }
