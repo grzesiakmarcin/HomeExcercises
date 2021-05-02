@@ -11,6 +11,7 @@ public class Main {
 
         FileReader reader = new FileReader("file.txt");
 
+
         char first = (char) reader.read();
         char second = (char) reader.read();
 
